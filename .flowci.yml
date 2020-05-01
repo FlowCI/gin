@@ -1,0 +1,25 @@
+envs:
+  # Git config
+  FLOWCI_GIT_URL: "https://github.com/FlowCI/gin.git"
+  FLOWCI_GIT_REPO: "gin-example"
+
+  ## Credential name if git repo url is ssh or login required for http
+  # FLOWCI_GIT_CREDENTIAL: "the credentail name your created"
+
+steps:
+  - name: clone
+    docker:
+      image: python:3.6
+    plugin: 'gitclone'
+    allow_failure: false
+
+  - name: lint
+    docker:
+      image: golang:1.12
+    plugin: 'go-lint'
+    allow_failure: true
+
+  - name: test
+    docker:
+      image: golang:1.12
+    plugin: 'go-test'
