@@ -10,7 +10,6 @@ Gin is a web framework written in Golang. It features a martini-like API with mu
 
 Yes, Gin is an internal project of [my](https://github.com/manucorporat) upcoming startup. We developed it and we are going to continue using and improve it.
 
-
 do not update
 
 ##Roadmap for v0.2
